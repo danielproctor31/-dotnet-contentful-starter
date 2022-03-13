@@ -1,4 +1,4 @@
-# Contentful.DotNet.Starter
+# contentful-dotnet-starter
 
 ## Overview
 Provides a wrapper around the Dotnet Contentful SDK to get pages and content in a known, easy to use page format.
