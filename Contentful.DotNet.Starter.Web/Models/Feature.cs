@@ -9,6 +9,5 @@ namespace Contentful.DotNet.Starter.Web.Models
         public string Title { get; set; }
         public Document Text { get; set; }
         public Asset Image { get; set; }
-
     }
 }

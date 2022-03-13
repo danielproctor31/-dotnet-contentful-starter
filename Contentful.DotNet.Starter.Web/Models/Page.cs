@@ -3,7 +3,7 @@ using Contentful.DotNet.Starter.Core.Models;
 
 namespace Contentful.DotNet.Starter.Web.Models
 {
-    public class BasicPage : IEntity
+    public class Page : IEntity
     {
         public PageSystemProperties Sys { get; set; }
         public string Slug { get; set; }

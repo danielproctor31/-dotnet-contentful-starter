@@ -9,7 +9,7 @@ namespace Contentful.DotNet.Starter
     {
         private readonly Dictionary<string, Type> _types = new Dictionary<string, Type>()
         {
-            { "page", typeof(BasicPage) },
+            { "page", typeof(Page) },
             { "feature", typeof(Feature) }
         };
 
