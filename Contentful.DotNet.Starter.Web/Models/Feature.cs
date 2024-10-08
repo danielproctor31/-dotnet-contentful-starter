@@ -1,13 +1,14 @@
-﻿using Contentful.Core.Models;
+﻿using System.Diagnostics.CodeAnalysis;
+using Contentful.Core.Models;
 using Contentful.DotNet.Starter.Core.Models;
 
-namespace Contentful.DotNet.Starter.Web.Models
+namespace Contentful.DotNet.Starter.Web.Models;
+
+[ExcludeFromCodeCoverage]
+public class Feature : IEntity
 {
-    public class Feature : IEntity
-    {
-        public ComponentSystemProperties Sys { get; set; }
-        public string Title { get; set; }
-        public Document Text { get; set; }
-        public Asset Image { get; set; }
-    }
+    public ComponentSystemProperties Sys { get; set; }
+    public string Title { get; set; }
+    public Document Text { get; set; }
+    public Asset Image { get; set; }
 }

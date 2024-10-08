@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 using Contentful.DotNet.Starter.Core.Client;
 using Contentful.DotNet.Starter.Core.Models;
@@ -13,15 +14,23 @@ public class PageController(ILogger<PageController> logger, IContentClient conte
 {
     [HttpGet]
     [Route("{**path}")]
-    public async Task<IEntity> Index(string path)
+    public async Task<IActionResult> Index(string path)
     {
-        var items = await contentClient.GetEntries<IEntity>("page", "fields.slug", path);
+        try
+        {
+            var items = await contentClient.GetEntries<IEntity>("page", "fields.slug", path);
 
-        if (items?.FirstOrDefault() == null)
-            return null;
+            if (items?.FirstOrDefault() == null)
+                return null;
 
-        var page = items.First();
+            var page = items.First();
 
-        return page;
+            return Ok(page);
+        }
+        catch(Exception e)
+        {
+            logger.LogError(e.Message);
+            return BadRequest();
+        }
     }
 }
