@@ -9,22 +9,13 @@ namespace Contentful.DotNet.Starter.Controllers;
 
 [Controller]
 [Route("")]
-public class PageController : ControllerBase
+public class PageController(ILogger<PageController> logger, IContentClient contentClient) : ControllerBase
 {
-    private readonly ILogger<PageController> _logger;
-    private readonly IContentClient _contentClient;
-
-    public PageController(ILogger<PageController> logger, IContentClient contentClient)
-    {
-        _logger = logger;
-        _contentClient = contentClient;
-    }
-
     [HttpGet]
     [Route("{**path}")]
     public async Task<IEntity> Index(string path)
     {
-        var items = await _contentClient.GetEntries<IEntity>("page", "fields.slug", path);
+        var items = await contentClient.GetEntries<IEntity>("page", "fields.slug", path);
 
         if (items?.FirstOrDefault() == null)
             return null;
