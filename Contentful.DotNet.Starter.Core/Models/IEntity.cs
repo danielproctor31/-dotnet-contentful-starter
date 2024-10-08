@@ -1,6 +1,5 @@
-﻿namespace Contentful.DotNet.Starter.Core.Models
+﻿namespace Contentful.DotNet.Starter.Core.Models;
+
+public interface IEntity
 {
-    public interface IEntity
-    {
-    }
 }

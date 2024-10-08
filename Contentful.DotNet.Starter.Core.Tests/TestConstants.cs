@@ -1,7 +1,9 @@
-﻿namespace Contentful.DotNet.Starter.Core.Tests
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace Contentful.DotNet.Starter.Core.Tests;
+
+[ExcludeFromCodeCoverage]
+public static class TestConstants
 {
-    public static class TestConstants
-    {
-        public const string PagePath = "/";
-    }
+    public const string PagePath = "/";
 }

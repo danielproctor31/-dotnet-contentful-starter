@@ -5,33 +5,32 @@ using Contentful.DotNet.Starter.Core.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace Contentful.DotNet.Starter.Controllers
+namespace Contentful.DotNet.Starter.Controllers;
+
+[Controller]
+[Route("")]
+public class PageController : ControllerBase
 {
-    [Controller]
-    [Route("")]
-    public class PageController : ControllerBase
+    private readonly ILogger<PageController> _logger;
+    private readonly IContentClient _contentClient;
+
+    public PageController(ILogger<PageController> logger, IContentClient contentClient)
     {
-        private readonly ILogger<PageController> _logger;
-        private readonly IContentClient _contentClient;
+        _logger = logger;
+        _contentClient = contentClient;
+    }
 
-        public PageController(ILogger<PageController> logger, IContentClient contentClient)
-        {
-            _logger = logger;
-            _contentClient = contentClient;
-        }
+    [HttpGet]
+    [Route("{**path}")]
+    public async Task<IEntity> Index(string path)
+    {
+        var items = await _contentClient.GetEntries<IEntity>("page", "fields.slug", path);
 
-        [HttpGet]
-        [Route("{**path}")]
-        public async Task<IEntity> Index(string path)
-        {
-            var items = await _contentClient.GetEntries<IEntity>("page", "fields.slug", path);
+        if (items?.FirstOrDefault() == null)
+            return null;
 
-            if (items?.FirstOrDefault() == null)
-                return null;
+        var page = items.First();
 
-            var page = items.First();
-
-            return page;
-        }
+        return page;
     }
 }
