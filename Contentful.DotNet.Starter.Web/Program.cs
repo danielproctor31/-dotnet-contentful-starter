@@ -8,8 +8,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
 var builder = WebApplication.CreateBuilder(args);
-var app = builder.Build();
-
 
 builder.Services.AddControllers().AddNewtonsoftJson();
 
@@ -17,6 +15,8 @@ builder.Services.Configure<AppSettings>(builder.Configuration.Bind);
 
 builder.Services.AddSingleton<IContentTypeResolver, EntityResolver>();
 builder.Services.AddContentfulServices(builder.Configuration);
+
+var app = builder.Build();
 
 IWebHostEnvironment env = app.Environment;
 if (env.IsDevelopment())
@@ -32,3 +32,5 @@ app.UseEndpoints(endpoints =>
 {
     _ = endpoints.MapControllers();
 });
+
+app.Run();
