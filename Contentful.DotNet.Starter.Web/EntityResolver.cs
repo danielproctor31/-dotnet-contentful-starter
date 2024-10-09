@@ -1,4 +1,5 @@
 ﻿using Content.DotNet.Starter.DomainModels;
+using Content.DotNet.Starter.DomainModels.Fragments;
 using Contentful.Core.Configuration;
 
 namespace Contentful.DotNet.Starter.Web;

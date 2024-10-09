@@ -14,7 +14,7 @@ ContentfulOptions:ManagementApiKey # optional
 
 The project will also need to call `AddContentfulServices` on startup.
 ```C#
-ServiceConfiguration.AddContentfulServices(configuration);
+serviceConfiguration.AddContentfulServices(configuration);
 ```
 
 `Contentful.DotNet.Starter.Web` is provided as an example starter project.
@@ -25,20 +25,20 @@ Use the contentful cli app to generate the models from your existing content mod
 In this example we have a page type with a list of content references.
 
 ```C#
-public class Page : IEntity
+public class Page : IPage
 {
     public List<IEntity> Content { get; set; }
 }
 ```
-
+And a Feature Component:
 ```C#
-public class Feature : IEntity
+public class FeatureFragment : IFragment
 {
     public string Title { get; set; }
 }
 ```
 
-Any registered type should be implemeting `IEntity`. These then be registered in an `IContentType` resolver class, with the key representing the contentTypeId in contentful.
+Any registered type should be implementing `IPage` (for pages) and `IFragment` for components. These then be registered in the resolver, with the key representing the contentTypeId in Contentful.
 
 ```C#
 public class EntityResolver : IContentTypeResolver
@@ -46,7 +46,7 @@ public class EntityResolver : IContentTypeResolver
     private readonly Dictionary<string, Type> _types = new Dictionary<string, Type>()
     {
         {"page", typeof(Page)},
-        { "feature", typeof(Feature) }
+        { "feature", typeof(FeatureFragment) }
     };
 
     public Type Resolve(string contentTypeId)

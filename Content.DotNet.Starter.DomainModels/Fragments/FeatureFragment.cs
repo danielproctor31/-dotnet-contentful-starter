@@ -2,7 +2,7 @@
 using Contentful.Core.Models;
 using Contentful.DotNet.Starter.Core.Models;
 
-namespace Content.DotNet.Starter.DomainModels;
+namespace Content.DotNet.Starter.DomainModels.Fragments;
 
 [ExcludeFromCodeCoverage]
 public class FeatureFragment : IFragment
