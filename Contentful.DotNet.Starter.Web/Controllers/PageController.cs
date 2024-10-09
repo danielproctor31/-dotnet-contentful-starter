@@ -1,12 +1,8 @@
-﻿using System;
-using System.Linq;
-using System.Threading.Tasks;
-using Contentful.DotNet.Starter.Core.Client;
+﻿using Contentful.DotNet.Starter.Core.Client;
 using Contentful.DotNet.Starter.Core.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 
-namespace Contentful.DotNet.Starter.Controllers;
+namespace Contentful.DotNet.Starter.Web.Controllers;
 
 [Controller]
 [Route("")]
@@ -21,7 +17,7 @@ public class PageController(ILogger<PageController> logger, IContentClient conte
             var items = await contentClient.GetEntries<IEntity>("page", "fields.slug", path);
 
             if (items?.FirstOrDefault() == null)
-                return null;
+                return NotFound();
 
             var page = items.First();
 

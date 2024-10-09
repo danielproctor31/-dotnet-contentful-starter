@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
+﻿using System.Diagnostics.CodeAnalysis;
 using Contentful.DotNet.Starter.Core.Models;
 
 namespace Contentful.DotNet.Starter.Web.Models;

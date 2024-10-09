@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using Contentful.Core;
+﻿using Contentful.Core;
 using Contentful.Core.Models;
 using Contentful.Core.Search;
 using Contentful.DotNet.Starter.Core.Client;
