@@ -397,9 +397,6 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 
-Contentful.DotNet.Starter.Core\bin
-Contentful.DotNet.Starter.Core\obj
-Contentful.DotNet.Starter.Tests.Core\bin
-Contentful.DotNet.Starter.Tests.Core\obj
-Contentful.DotNet.Starter.Web\bin
-Contentful.DotNet.Starter.Web\obj
+**\bin
+**\obj
+.idea/
