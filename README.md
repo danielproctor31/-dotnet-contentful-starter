@@ -4,7 +4,7 @@
 Provides a wrapper around the Dotnet Contentful SDK to get pages and content in a known, easy to use page format.
 
 ## Setup
-To use this client, your project will need to reference `Contentful.DotNet.Starter.Core` and should have the following [user secrets](https://learn.microsoft.com/en-us/aspnet/core/security/app-secrets?view=aspnetcore-8.0&tabs=windows), replacing any values where required:
+To use this client, your project will need to reference `Contentful.DotNet.Starter.Core` and should have the following [user secrets](https://learn.microsoft.com/en-us/aspnet/core/security/app-secrets?view=aspnetcore-8.0&tabs=windows):
 ```
 ContentfulOptions:SpaceId
 ContentfulOptions:DeliveryApiKey
