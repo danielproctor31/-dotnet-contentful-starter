@@ -1,10 +1,10 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using Contentful.DotNet.Starter.Core.Models;
 
-namespace Contentful.DotNet.Starter.Web.Models;
+namespace Content.DotNet.Starter.DomainModels;
 
 [ExcludeFromCodeCoverage]
-public class Page : IEntity
+public class Page : IPage
 {
     public PageSystemProperties Sys { get; set; }
     public string Slug { get; set; }

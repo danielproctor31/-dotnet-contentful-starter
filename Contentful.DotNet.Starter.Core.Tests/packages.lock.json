@@ -2,6 +2,12 @@
   "version": 2,
   "dependencies": {
     "net8.0": {
+      "Bogus": {
+        "type": "Direct",
+        "requested": "[35.6.1, )",
+        "resolved": "35.6.1",
+        "contentHash": "QPJ8zLL0ScEunEoUNhMDigD4ykA/n7vXCZUQdGCFGHBfP2mNYjiCzR9Cj12eaFaDlwkhIC1HKQZihWl8OgbLsw=="
+      },
       "Microsoft.NET.Test.Sdk": {
         "type": "Direct",
         "requested": "[17.11.1, )",
@@ -1756,6 +1762,12 @@
           "System.Xml.ReaderWriter": "4.3.0",
           "System.Xml.XDocument": "4.3.0",
           "System.Xml.XPath": "4.3.0"
+        }
+      },
+      "content.dotnet.starter.domainmodels": {
+        "type": "Project",
+        "dependencies": {
+          "Contentful.DotNet.Starter.Core": "[1.0.0, )"
         }
       },
       "contentful.dotnet.starter.core": {

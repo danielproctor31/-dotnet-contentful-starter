@@ -1,4 +1,6 @@
-﻿using Contentful.Core;
+﻿using Bogus;
+using Content.DotNet.Starter.DomainModels;
+using Contentful.Core;
 using Contentful.Core.Models;
 using Contentful.Core.Search;
 using Contentful.DotNet.Starter.Core.Client;
@@ -12,13 +14,15 @@ public class ContentClientTests
 {
     private Mock<IContentfulClient> _contentfulClient;
 
+    private readonly Faker _faker = new();
+
     private ContentClient _contentClient;
 
     [SetUp]
     public void Setup()
     {
         _contentfulClient = new Mock<IContentfulClient>();
-        
+
         var optionsMonitorMock = new Mock<IOptionsMonitor<AppSettings>>();
 
         var appSettings = new Mock<AppSettings>();
@@ -30,17 +34,20 @@ public class ContentClientTests
     }
 
     [Test]
-    public async Task GetEntries()
+    public async Task GetEntries_GivenEntriesExist_ReturnsEntries()
     {
-        var items = new List<TestPage>();
+        var items = new List<Page>
+        {
+            new()
+        };
 
-        _contentfulClient.Setup(x => x.GetEntries(It.IsAny<QueryBuilder<TestPage>>(), default))
-            .ReturnsAsync(new ContentfulCollection<TestPage> { Items = items });
+        _contentfulClient.Setup(x => x.GetEntries(It.IsAny<QueryBuilder<Page>>(), default))
+            .ReturnsAsync(new ContentfulCollection<Page> { Items = items });
 
-        var result = await _contentClient.GetEntries<TestPage>("", "", "");
+        var result = await _contentClient.GetEntries<Page>(_faker.Lorem.Word(), _faker.Lorem.Word(), _faker.Lorem.Word());
 
-        Assert.That(items, Is.EqualTo(result));
+        Assert.That(result, Is.EquivalentTo(items));
 
-        _contentfulClient.Verify(x => x.GetEntries(It.IsAny<QueryBuilder<TestPage>>(), default));
+        _contentfulClient.Verify(x => x.GetEntries(It.IsAny<QueryBuilder<Page>>(), default));
     }
 }

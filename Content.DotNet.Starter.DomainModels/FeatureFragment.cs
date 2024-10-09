@@ -2,10 +2,10 @@
 using Contentful.Core.Models;
 using Contentful.DotNet.Starter.Core.Models;
 
-namespace Contentful.DotNet.Starter.Web.Models;
+namespace Content.DotNet.Starter.DomainModels;
 
 [ExcludeFromCodeCoverage]
-public class Feature : IEntity
+public class FeatureFragment : IFragment
 {
     public ComponentSystemProperties Sys { get; set; }
     public string Title { get; set; }

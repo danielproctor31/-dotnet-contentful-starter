@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Aspire.ServiceDefaults\Aspire.ServiceDefaults.csproj" />
+    <ProjectReference Include="..\Content.DotNet.Starter.DomainModels\Content.DotNet.Starter.DomainModels.csproj" />
     <ProjectReference Include="..\Contentful.DotNet.Starter.Core\Contentful.DotNet.Starter.Core.csproj" />
   </ItemGroup>
 </Project>

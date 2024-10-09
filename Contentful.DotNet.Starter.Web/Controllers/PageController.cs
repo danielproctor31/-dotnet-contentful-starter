@@ -1,4 +1,5 @@
-﻿using Contentful.DotNet.Starter.Core.Client;
+﻿using Content.DotNet.Starter.DomainModels;
+using Contentful.DotNet.Starter.Core.Client;
 using Contentful.DotNet.Starter.Core.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -14,7 +15,8 @@ public class PageController(ILogger<PageController> logger, IContentClient conte
     {
         try
         {
-            var items = await contentClient.GetEntries<IEntity>("page", "fields.slug", path);
+            var items = await contentClient.GetEntries<IPage>(IPage.ContentType,
+                $"fields.{nameof(Page.Slug.ToLowerInvariant)}", path);
 
             if (items?.FirstOrDefault() == null)
                 return NotFound();
