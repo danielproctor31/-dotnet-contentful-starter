@@ -12,12 +12,17 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A51B3D32-F42A-4DE6-B389-FD2060E41472}"
 	ProjectSection(SolutionItems) = preProject
 		.dockerignore = .dockerignore
+		.editorconfig = .editorconfig
 		.gitignore = .gitignore
 		Directory.Packages.props = Directory.Packages.props
 		globals.json = globals.json
 		nuget.config = nuget.config
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aspire.AppHost", "Aspire.AppHost\Aspire.AppHost.csproj", "{923695A5-369C-421E-A737-77E7D863E606}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aspire.ServiceDefaults", "Aspire.ServiceDefaults\Aspire.ServiceDefaults.csproj", "{93B356AF-2B96-4216-BA28-9578C05434E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +42,14 @@ Global
 		{3E5E0AF3-6DDB-42F4-AF24-B2B2D5E50B9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E5E0AF3-6DDB-42F4-AF24-B2B2D5E50B9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E5E0AF3-6DDB-42F4-AF24-B2B2D5E50B9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{923695A5-369C-421E-A737-77E7D863E606}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{923695A5-369C-421E-A737-77E7D863E606}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{923695A5-369C-421E-A737-77E7D863E606}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{923695A5-369C-421E-A737-77E7D863E606}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93B356AF-2B96-4216-BA28-9578C05434E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93B356AF-2B96-4216-BA28-9578C05434E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93B356AF-2B96-4216-BA28-9578C05434E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93B356AF-2B96-4216-BA28-9578C05434E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

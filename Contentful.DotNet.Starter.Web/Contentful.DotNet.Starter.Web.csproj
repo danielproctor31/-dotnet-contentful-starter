@@ -15,7 +15,9 @@
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" />
     <PackageReference Include="Swashbuckle.AspNetCore" />
   </ItemGroup>
+
   <ItemGroup>
+    <ProjectReference Include="..\Aspire.ServiceDefaults\Aspire.ServiceDefaults.csproj" />
     <ProjectReference Include="..\Contentful.DotNet.Starter.Core\Contentful.DotNet.Starter.Core.csproj" />
   </ItemGroup>
 </Project>
