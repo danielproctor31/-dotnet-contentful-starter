@@ -2,6 +2,7 @@
 
 public interface IPage : IEntity
 {
-    public static string ContentType => "page";
-    public PageSystemProperties Sys { get; set; }
+    public PageSystemProperties? Sys { get; set; }
+    public string Slug { get; set; }
+
 }

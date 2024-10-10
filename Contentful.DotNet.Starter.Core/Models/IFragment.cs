@@ -2,5 +2,5 @@
 
 public interface IFragment : IEntity
 {
-    public ComponentSystemProperties Sys { get; set; }
+    public ComponentSystemProperties? Sys { get; set; }
 }
