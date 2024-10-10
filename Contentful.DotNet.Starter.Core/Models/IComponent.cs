@@ -1,6 +1,6 @@
 ﻿namespace Contentful.DotNet.Starter.Core.Models;
 
-public interface IFragment : IEntity
+public interface IComponent : IEntity
 {
     public ComponentSystemProperties? Sys { get; set; }
 }

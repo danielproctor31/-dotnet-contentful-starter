@@ -32,13 +32,13 @@ public class Page : IPage
 ```
 And a Feature Component:
 ```C#
-public class FeatureFragment : IFragment
+public class FeatureComponent : IComponent
 {
     public string Title { get; set; }
 }
 ```
 
-Any registered type should be implementing `IPage` (for pages) and `IFragment` for components. These then be registered in the resolver, with the key representing the contentTypeId in Contentful.
+Any registered type should be implementing `IPage` (for pages) and `IComponent` for components. These then be registered in the resolver, with the key representing the contentTypeId in Contentful.
 
 ```C#
 public class EntityResolver : IContentTypeResolver
@@ -46,7 +46,7 @@ public class EntityResolver : IContentTypeResolver
     private readonly Dictionary<string, Type> _types = new Dictionary<string, Type>()
     {
         {"page", typeof(Page)},
-        { "feature", typeof(FeatureFragment) }
+        { "feature", typeof(FeatureComponent) }
     };
 
     public Type Resolve(string contentTypeId)
