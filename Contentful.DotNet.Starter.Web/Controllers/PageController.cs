@@ -15,7 +15,7 @@ public class PageController(ILogger<PageController> logger, IContentClient conte
     {
         try
         {
-            var items = await contentClient.GetEntries<IPage>(IPage.ContentType,
+            var items = await contentClient.GetEntries<IPage>("page",
                 $"fields.{nameof(Page.Slug.ToLowerInvariant)}", path);
 
             if (items?.FirstOrDefault() == null)
