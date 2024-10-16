@@ -2,11 +2,6 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-	<TargetFramework>net8.0</TargetFramework>
-	<ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
-	<RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
-	<ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
     <IsAspireHost>true</IsAspireHost>
     <UserSecretsId>489660fd-1c8a-4093-bc7b-678e9050c06b</UserSecretsId>
   </PropertyGroup>

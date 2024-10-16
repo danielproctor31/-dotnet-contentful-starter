@@ -5,5 +5,5 @@ namespace Contentful.DotNet.Starter.Core.Models;
 [ExcludeFromCodeCoverage]
 public class ComponentSystemProperties
 {
-    public string Id { get; set; }
+    public string Id { get; set; } = string.Empty;
 }

@@ -12,11 +12,11 @@ namespace Contentful.DotNet.Starter.Core.Tests;
 
 public class ContentClientTests
 {
-    private Mock<IContentfulClient> _contentfulClient;
+    private Mock<IContentfulClient>? _contentfulClient;
 
     private readonly Faker _faker = new();
 
-    private ContentClient _contentClient;
+    private ContentClient? _contentClient;
 
     [SetUp]
     public void Setup()
@@ -41,10 +41,10 @@ public class ContentClientTests
             new()
         };
 
-        _contentfulClient.Setup(x => x.GetEntries(It.IsAny<QueryBuilder<Page>>(), default))
+        _contentfulClient!.Setup(x => x.GetEntries(It.IsAny<QueryBuilder<Page>>(), default))
             .ReturnsAsync(new ContentfulCollection<Page> { Items = items });
 
-        var result = await _contentClient.GetEntries<Page>(_faker.Lorem.Word(), _faker.Lorem.Word(), _faker.Lorem.Word());
+        var result = await _contentClient!.GetEntries<Page>(_faker.Lorem.Word(), _faker.Lorem.Word(), _faker.Lorem.Word());
 
         Assert.That(result, Is.EquivalentTo(items));
 

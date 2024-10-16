@@ -1,12 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
-
+  
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
-    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
-	<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
-	<Nullable>enable</Nullable>
-	<ImplicitUsings>enable</ImplicitUsings>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <UserSecretsId>6565a124-ebc0-4a1e-b97d-9840361dcf04</UserSecretsId>
   </PropertyGroup>
 
