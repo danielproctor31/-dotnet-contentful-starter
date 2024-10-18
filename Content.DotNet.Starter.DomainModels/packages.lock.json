@@ -1714,15 +1714,15 @@
         "type": "Project",
         "dependencies": {
           "Newtonsoft.Json": "[13.0.3, )",
-          "contentful.aspnetcore": "[8.2.1, )",
-          "contentful.csharp": "[8.2.1, )"
+          "contentful.aspnetcore": "[8.3.0, )",
+          "contentful.csharp": "[8.3.0, )"
         }
       },
       "contentful.aspnetcore": {
         "type": "CentralTransitive",
-        "requested": "[8.2.1, )",
-        "resolved": "8.2.1",
-        "contentHash": "QjU1fOcsFdBZKEw8gaqC3Jvl5AlcHwVG915kwnDHX6gqVsC9ycsvigllcm5nAteKqOKq+wt/RSevkDsnoFc1Kw==",
+        "requested": "[8.3.0, )",
+        "resolved": "8.3.0",
+        "contentHash": "ou9tMtvFTV6X1/G0wjhiAUfLoEDU0rdb5jW9PDBADTjnycRVaurr+NZK+iVHtASQrs7WB15Z3HtRItg2DwV6Og==",
         "dependencies": {
           "Microsoft.AspNetCore.Http": "2.2.2",
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
@@ -1733,14 +1733,14 @@
           "Microsoft.Extensions.Http": "6.0.0",
           "Microsoft.Extensions.Options.ConfigurationExtensions": "6.0.0",
           "System.Net.Http": "4.3.4",
-          "contentful.csharp": "8.2.1"
+          "contentful.csharp": "8.3.0"
         }
       },
       "contentful.csharp": {
         "type": "CentralTransitive",
-        "requested": "[8.2.1, )",
-        "resolved": "8.2.1",
-        "contentHash": "NSIzHHYcFUGUc1WEL2mEInEpW8avcJsEethP3t2znmu/EjvSZLCJD2+4NOjsPDBmlE1RdGxz7wUb/RYZ8aDhkA==",
+        "requested": "[8.3.0, )",
+        "resolved": "8.3.0",
+        "contentHash": "aArmWXoAooDNkTsEST211QjNAHgWgvSRrhMrwnS9iKoMEMMHIiPD+9XtmhqtSAGzo/MrfuDsAcukMeTglsmMLA==",
         "dependencies": {
           "Microsoft.CSharp": "4.7.0",
           "Newtonsoft.Json": "13.0.1"

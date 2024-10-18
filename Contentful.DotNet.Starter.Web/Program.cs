@@ -5,6 +5,10 @@ using Contentful.DotNet.Starter.Web;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.ConfigureHttpClientDefaults(http => {
+    http.AddStandardResilienceHandler();
+});
+
 // aspire
 builder.AddServiceDefaults();
 
