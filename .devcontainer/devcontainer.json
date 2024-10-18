@@ -6,7 +6,7 @@
 	"image": "mcr.microsoft.com/devcontainers/dotnet:1-8.0-bookworm",
 	"features": {
 		"ghcr.io/nikiforovall/devcontainer-features/dotnet-aspire:1": {}
-	}
+	},
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
@@ -20,7 +20,17 @@
 	// }
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "dotnet restore",
+	"postCreateCommand": "dotnet tool install --global dotnet-outdated-tool",
+
+	// Configure tool-specific properties.
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-dotnettools.csdevkit",
+				"ms-dotnettools.vscodeintellicode-csharp"
+			]
+		}
+	}
 
 	// Configure tool-specific properties.
 	// "customizations": {},
